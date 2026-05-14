@@ -378,6 +378,19 @@ Every image you upload is saved locally (URL + thumbnail) so you never upload th
 
 ## 🚀 Quick Start
 
+### Colab demo (free GPU)
+
+**[Open Colab Demo Notebook](https://colab.research.google.com/github/Anil-matcha/Open-Generative-AI/blob/main/colab_demo.ipynb)** — runs a short-lived Wan2GP server on a free GPU and exposes it via `localtunnel` for testing.
+
+Steps:
+1. Click the link above to open in Google Colab (requires a Google account).
+2. Set Runtime → Change runtime type → Hardware accelerator: **GPU**.
+3. Run the cells to install, start Wan2GP, and launch the tunnel.
+4. Copy the public URL from `localtunnel` output.
+5. In the desktop app, go to Settings → Local Models → Wan2GP server, paste the URL, and click Test.
+
+See `DEPLOY_COLAB.md` for full instructions and caveats.
+
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18+)

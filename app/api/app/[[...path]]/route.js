@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const MUAPI_BASE = 'https://api.muapi.ai';
+const MUAPI_BASE = process.env.MUAPI_BASE || 'https://api.muapi.ai';
 
 function getApiKey(request) {
     // Priority 1: Direct x-api-key header
@@ -9,7 +9,11 @@ function getApiKey(request) {
 
     // Priority 2: muapi_key cookie (used by the fixed builder library)
     const cookieKey = request.cookies.get('muapi_key')?.value;
-    return cookieKey;
+    if (cookieKey) return cookieKey;
+
+    // Priority 3: server-side fallback (useful for hosted deploys)
+    // Note: a shared server key may incur costs and has security implications.
+    return process.env.MUAPI_KEY || null;
 }
 
 function cleanHeaders(request) {
