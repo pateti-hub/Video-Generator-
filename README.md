@@ -380,7 +380,7 @@ Every image you upload is saved locally (URL + thumbnail) so you never upload th
 
 ### Colab demo (free GPU)
 
-**[Open Colab Demo Notebook](https://colab.research.google.com/github/Anil-matcha/Open-Generative-AI/blob/main/colab_demo.ipynb)** — runs a short-lived Wan2GP server on a free GPU and exposes it via `localtunnel` for testing.
+**[Open Colab Demo Notebook](https://colab.research.google.com/github/pateti-hub/Video-Generator-/blob/main/colab_demo.ipynb)** — runs a short-lived Wan2GP server on a free GPU and exposes it via `localtunnel` for testing.
 
 Steps:
 1. Click the link above to open in Google Colab (requires a Google account).
